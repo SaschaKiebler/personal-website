@@ -5,9 +5,9 @@ import {useAuthState} from "react-firebase-hooks/auth";
 export default function Nav(){
     const [user,loading] = useAuthState(auth);
 return(
-    <nav>
+    <nav id="nav">
         <Link href="/">
-        <button>Sascha Kiebler</button>
+        <button className="navItem">Sascha Kiebler</button>
         </Link>
         <ul>
         {!user && (
@@ -21,7 +21,7 @@ return(
                 <button>Post</button>
                 </Link>
                 <Link href="/dashboard">
-                <img src={user.photoURL}/>
+                <img id="avatarNav" src={user.photoURL}/>
                 </Link>
         </div>
         )}

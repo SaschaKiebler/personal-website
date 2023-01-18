@@ -8,7 +8,7 @@ import Typewriter from 'typewriter-effect';
 
 export default function Home() {
   
-  const [allPosts, setAllPosts] = useState([]);
+  {/*const [allPosts, setAllPosts] = useState([]);
 const getPosts = async () =>{
   const collectionRef = collection(db, "posts");
   const q = query(collectionRef, orderBy("timestamp","desc"));
@@ -21,10 +21,12 @@ const getPosts = async () =>{
 
 useEffect(()=>{
   getPosts();
-},[]);
+},[]);*/}
 
   return (
-    <>
+    <motion.main initial={{y:"100%"}} animate={{y:"0%"}} transition={{duration:0.75, ease:"easeOut"}} exit={{opacity:1}}
+    className="absolute bg-black left-0 right-0 w-full h-full"
+    >
       <Head>
         <title>Sascha Kiebler</title>
         <meta name="description" content="created by Sascha Kiebler with next.js" />
@@ -33,15 +35,19 @@ useEffect(()=>{
       </Head>
       
       <div>
-        <motion.h1
-className="text-center font-bold mt-2 text-6xl text-white">HERZLICH WILLKOMMEN...</motion.h1>
-        <h1 className="text-center font-bold mt-2 text-5xl text-white"><Typewriter
-        onInit={(typewriter) => {
-          typewriter.typeString('...SCHÖN, DASS SIE HIER SIND')
-            
-            .start();
-        }}
-      /></h1>
+        <h1
+className="text-center font-bold mt-2 lg:text-6xl text-2xl text-white font-poppins"><Typewriter
+onInit={(typewriter) => {
+  typewriter
+  .pauseFor(1000)
+  .typeString('HERZLICH WILLKOMMEN...<br>')
+  .typeString('...SCHÖN DASS SIE HIER SIND')
+  .pauseFor(500)
+  .deleteAll()
+  .start();
+}}
+/></h1>
+        <h1 className="text-center font-bold mt-2 text-5xl text-white"></h1>
       </div>
       {/*<div>
         <h1>Seh was andere Sagen</h1>
@@ -49,6 +55,6 @@ className="text-center font-bold mt-2 text-6xl text-white">HERZLICH WILLKOMMEN..
           <Message key={post.id} {...post}></Message>
         )}
         </div>*/}
-    </>
+    </motion.main>
   );
 }

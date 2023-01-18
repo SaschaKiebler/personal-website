@@ -7,29 +7,35 @@ import {FaCrown} from "react-icons/fa";
 export default function Nav(){
     const [user,loading] = useAuthState(auth);
 return(
-    <nav className="w-full">
-        <ul className="inline-flex bg-black text-white w-full p-4 mb-4">
-        <li>
+    <nav className="text-xl font-poppins font-bold text-white bg-black">
+        <ul className="flex p-4 pb-6 ">
         <Link href="/">
+        <li>
         <button className="mr-1">Sascha Kiebler</button> 
-        </Link></li>
-        <li className="mr-4 ml-3"><FaCrown/></li>
+        </li></Link>
+        {/*<li className="mr-4 ml-3"><FaCrown/></li>*/}
+        <Link href="/">
+        <li className="lg:ml-8">HOME</li>
+        </Link>
+        <Link href="/kontakt" className="lg:ml-12 lg:mr-12">
+        <li>KONTAKT</li>
+        </Link>
         {!user && (
-            <li><Link href="/auth/login">
-            <p>Login</p>
-            </Link></li>
+            <Link href="/auth/login">
+            <li>LOGIN</li>
+            </Link>
         )}
         {user && ( 
         <div>
-            <li>
+           
                 <Link href="/post">
-                <button>Post</button>
+                <li> <button>CHAT</button></li>
                 </Link>
-                </li>
-                <li>
+                
+                
                 <Link href="/dashboard">
-                <img  src={user.photoURL}/>
-                </Link></li>
+                <li> <img  src={user.photoURL}/></li>
+                </Link>
         </div>
         )}
         </ul>

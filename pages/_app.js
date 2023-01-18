@@ -2,11 +2,18 @@ import Layout from '../components/Layout'
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import '../styles/globals.css';
+import Nav from '../components/Nav';
+import { AnimatePresence } from 'framer-motion';
 
-export default function App({ Component, pageProps }) {
+export default function App({ Component, pageProps,router }) {
+  
   return (
-  <Layout>
+  <div>
     <ToastContainer limit={1}/>
-    <Component {...pageProps} /></Layout>
+    <Nav/>
+    <AnimatePresence >
+    <Component key={router.pathname} {...pageProps} />
+    </AnimatePresence>
+    </div>
   )
 }

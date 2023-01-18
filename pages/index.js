@@ -3,7 +3,8 @@ import Message from "../components/message";
 import { useState,useEffect } from "react";
 import { db } from "../utils/firebase";
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
-import {BiRocket} from "react-icons/bi";
+import { motion } from "framer-motion";
+import Typewriter from 'typewriter-effect';
 
 export default function Home() {
   
@@ -30,9 +31,17 @@ useEffect(()=>{
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="">
-        <h1 className="text-center font-bold animate-bounce mt-2 text-2xl ">HERZLICH WILLKOMMEN...</h1>
-        <h1 className="text-center font-bold animate-bounce mt-2 text-2xl ">...HIER FINDEN SIE EINIGE MEINER PROJEKTE </h1>
+      
+      <div>
+        <motion.h1
+className="text-center font-bold mt-2 text-6xl text-white">HERZLICH WILLKOMMEN...</motion.h1>
+        <h1 className="text-center font-bold mt-2 text-5xl text-white"><Typewriter
+        onInit={(typewriter) => {
+          typewriter.typeString('...SCHÖN, DASS SIE HIER SIND')
+            
+            .start();
+        }}
+      /></h1>
       </div>
       {/*<div>
         <h1>Seh was andere Sagen</h1>

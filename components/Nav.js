@@ -13,7 +13,7 @@ return(
         <Link href="/">
         <button className="mr-1">Sascha Kiebler</button> 
         </Link></li>
-        <li className="mr-4 center"><FaCrown/></li>
+        <li className="mr-4 ml-3"><FaCrown/></li>
         {!user && (
             <li><Link href="/auth/login">
             <p>Login</p>

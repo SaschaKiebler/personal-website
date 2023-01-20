@@ -5,6 +5,8 @@ import { db } from "../utils/firebase";
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import { motion } from "framer-motion";
 import Typewriter from 'typewriter-effect';
+import Image from 'next/image';
+import baumBild from '../public/baum_illustration Schwarz.jpg';
 
 export default function Home() {
   
@@ -57,6 +59,9 @@ onInit={(typewriter) => {
 }} 
 /></h1>
 
+      </div>
+      <div>
+        <Image src={baumBild} alt="Farbiges Bild mit Baumschatten" className="w-1/2 float-right" />
       </div>
       
       {/*<div>

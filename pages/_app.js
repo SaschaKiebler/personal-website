@@ -11,7 +11,7 @@ export default function App({ Component, pageProps,router }) {
   <div>
     <ToastContainer limit={1}/>
     <Nav/>
-    <AnimatePresence >
+    <AnimatePresence initial={false}>
     <Component key={router.pathname} {...pageProps} />
     </AnimatePresence>
     </div>

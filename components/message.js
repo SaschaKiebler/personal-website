@@ -2,8 +2,8 @@
 
 export default function Message({children, avatar,username,description}){
     return (
-      <div>
-        <div>
+      <div className="items-center">
+        <div className="">
           <img src={avatar} />
           <h2>{username}</h2>
         </div>

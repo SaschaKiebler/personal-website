@@ -34,21 +34,31 @@ useEffect(()=>{
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      <div>
+      <div className="w-1/2 float-right">
+        <h1 className="text-right font-bold mt-2 mr-9 lg:text-6xl text-2xl text-white font-poppins lg:mt-5">Willkommen.</h1>
+
         <h1
-className="text-center font-bold mt-2 lg:text-6xl text-2xl text-white font-poppins"><Typewriter
+className="text-right mt-9 lg:text-8xl text-2xl mr-9 text-white font-poppins">
+  <Typewriter
 onInit={(typewriter) => {
   typewriter
-  .pauseFor(1000)
-  .typeString('HERZLICH WILLKOMMEN...<br>')
-  .typeString('...SCHÖN DASS SIE HIER SIND')
+  .pauseFor(500)
+  .typeString('Ich bin Frontend-Entwickler')
+  .pauseFor(500)
+  .deleteChars(19)
+  .typeString("Backend-Entwickler")
+  .pauseFor(500)
+  .deleteChars(18)
+  .typeString("Gesundheits-Informatik-Student")
   .pauseFor(500)
   .deleteAll()
+  .typeString('Schau dich auf meiner<br> Seite um.')
   .start();
-}}
+}} 
 /></h1>
-        <h1 className="text-center font-bold mt-2 text-5xl text-white"></h1>
+
       </div>
+      
       {/*<div>
         <h1>Seh was andere Sagen</h1>
         {allPosts.map((post)=>

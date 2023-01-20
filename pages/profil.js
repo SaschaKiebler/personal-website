@@ -7,8 +7,9 @@ import Message from "../components/message";
 import {BsTrash2Fill} from "react-icons/bs";
 import {AiFillEdit} from "react-icons/ai";
 import Link from "next/link";
+import {motion} from "framer-motion";
 
-export default function Dashboard(){
+export default function Profil(){
     const route = useRouter();
     const [user,loading] = useAuthState(auth);
     const [posts, setPosts] = useState([]);
@@ -35,7 +36,8 @@ export default function Dashboard(){
     },[user,loading]);
     
     return(
-        <div>
+        <motion.div initial={{y:"100%"}} animate={{y:"0%"}} transition={{duration:0.75, ease:"easeOut"}} exit={{opacity:1}}
+        className='w-full h-full absolute bg-black text-white font-poppins text-center'>
             <h1>Deine Posts</h1>
             <div>{posts.map((post) => {
           return (
@@ -55,6 +57,6 @@ export default function Dashboard(){
           );
         })}</div>
             <button onClick={()=> auth.signOut()}>Sign out</button>
-        </div>
+        </motion.div>
     )
 }

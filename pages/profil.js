@@ -37,25 +37,34 @@ export default function Profil(){
     
     return(
         <motion.div initial={{y:"100%"}} animate={{y:"0%"}} transition={{duration:0.75, ease:"easeOut"}} exit={{opacity:1}}
-        className='w-full h-full absolute bg-black text-white font-poppins text-center'>
-            <h1>Deine Posts</h1>
-            <div>{posts.map((post) => {
+        className='w-full h-full absolute bg-black text-white font-poppins'>
+            <div className="w-full text-center"><h1 className="text-xl mb-2">Chat-Übersicht</h1>
+            <p>Auf dieser Seite können Sie mit mir in Kontakt treten. Den Chat sehen nur Sie und ich</p>
+            </div>
+            <div className="ml-[25%] mr-[25%] justify-center">{posts.map((post) => {
+
           return (
             <Message {...post} key={post.id}>
-              <div>
-                <button onClick={()=> deletePost(post.id)}>
-                  <BsTrash2Fill/> Delete
+              <div className="flex">
+                <button onClick={()=> deletePost(post.id)} className="bg-red-700 flex items-center p-1 rounded-xl mr-2 ml-3">
+                  <BsTrash2Fill className=""/> Löschen
                 </button>
                   <Link href={{pathname:"/post", query:post}}>
-                  <button>
+                  <button className="bg-green-700 flex items-center p-1 rounded-xl">
                     <AiFillEdit/>
-                    Edit
+                    Bearbeiten
                   </button>
                   </Link>
               </div>
             </Message>
           );
         })}</div>
+          <div className=" w-full  mt-4 flex justify-center">
+            <Link href="/post" className="flex items-center w-fit text-center">
+            <p className="bg-slate-700 p-4 w-14 h-14 rounded-full mr-1">+</p>
+            Neue Nachricht
+            </Link>
+          </div>
             <button onClick={()=> auth.signOut()}>Sign out</button>
         </motion.div>
     )

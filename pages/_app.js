@@ -8,7 +8,7 @@ import { AnimatePresence } from 'framer-motion';
 export default function App({ Component, pageProps,router }) {
   
   return (
-  <div>
+  <div className='w-full'>
     <ToastContainer limit={1}/>
     <Nav/>
     <AnimatePresence initial={false}>

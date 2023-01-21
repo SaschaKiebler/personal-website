@@ -1,0 +1,34 @@
+
+> personal-website@0.1.0 build
+> next build
+
+info  - Loaded env from C:\Users\sascha\Documents\PersonalHomepage\personal-website\.env.local
+info  - Linting and checking validity of types...
+info  - Creating an optimized production build...
+info  - Compiled successfully
+info  - Collecting page data...
+info  - Generating static pages (0/8)
+info  - Generating static pages (2/8)
+info  - Generating static pages (4/8)
+info  - Generating static pages (6/8)
+info  - Generating static pages (8/8)
+info  - Finalizing page optimization...
+
+Route (pages)                              Size     First Load JS
+┌ ○ / (1966 ms)                            14 kB           230 kB
+├   /_app                                  0 B             185 kB
+├ ○ /404                                   181 B           185 kB
+├ ○ /about (1905 ms)                       385 B           216 kB
+├ ○ /auth/login (1970 ms)                  1.9 kB          218 kB
+├ ○ /kontakt (1910 ms)                     421 B           216 kB
+├ ○ /post (1958 ms)                        1.1 kB          217 kB
+└ ○ /profil (1987 ms)                      2.69 kB         219 kB
++ First Load JS shared by all              189 kB
+  ├ chunks/framework-ad45764ecfcae9e5.js   45.4 kB
+  ├ chunks/main-010ff0b6bbe5ac8f.js        27.1 kB
+  ├ chunks/pages/_app-b4e29155bb523438.js  112 kB
+  ├ chunks/webpack-59c5c889f52620d6.js     819 B
+  └ css/72e91e02763ba371.css               4.14 kB
+
+○  (Static)  automatically rendered as static HTML (uses no initial props)
+

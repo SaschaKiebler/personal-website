@@ -14,6 +14,7 @@ return(
         <button className="mr-1">Sascha Kiebler</button> 
         </li></Link>
         {/*<li className="mr-4 ml-3"><FaCrown/></li>*/}
+        
         <Link href="/" className="lg:ml-96">
         <li >HOME</li>
         </Link>

@@ -66,15 +66,17 @@ useEffect(() =>{
     return(
         <motion.div initial={{y:"100%"}} animate={{y:"0%"}} transition={{duration:0.75, ease:"easeOut"}} exit={{opacity:1}}
         className='w-full h-full absolute bg-black text-white font-poppins'>
-            <form onSubmit={submitPost}>
-                <h1 className="">{post.hasOwnProperty("id") ? "bearbeite deine Nachricht" : "schreibe eine neue Nachricht"}</h1>
+            <div className="flex justify-center w-full h-fit">
+                <form onSubmit={submitPost} className="p-3 mt-3 bg-slate-800 w-1/3 h-full rounded-md">
+                <h1 className="m-2 text-center">{post.hasOwnProperty("id") ? "bearbeite deine Nachricht" : "schreibe eine neue Nachricht"}</h1>
                 <div>
                     <h3>Inhalt</h3>
-                    <textarea value={post.description} onChange={(e)=>{setPost({...post, description:e.target.value})}} className="bg-slate-600 border-none"></textarea>
+                    <textarea rows="5" value={post.description} onChange={(e)=>{setPost({...post, description:e.target.value})}} className="bg-slate-600 w-full p-2 h-full"></textarea>
                 </div>
                 <p>{post.description.length}/1000</p>
-                <button type="submit">Submit</button>
+                <button type="submit" className="p-2 bg-green-700 mt-2 rounded-lg">Senden</button>
             </form>
+            </div>
            
         </motion.div>
     )

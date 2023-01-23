@@ -27,7 +27,7 @@ useEffect(()=>{
 
   return (
     <motion.main initial={{y:"100%"}} animate={{y:"0%"}} transition={{duration:0.75, ease:"easeOut"}} exit={{opacity:1}}
-    className="absolute bg-black left-0 right-0 w-full h-full"
+    className="absolute bg-black w-full h-full"
     >
       <Head>
         <title>Sascha Kiebler</title>

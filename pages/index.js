@@ -45,12 +45,12 @@ className="text-right mt-9 lg:text-8xl text-2xl mr-9 text-white font-poppins">
 onInit={(typewriter) => {
   typewriter
   .pauseFor(500)
-  .typeString('Ich bin Frontend-Entwickler')
+  .typeString('Ich bin Sascha Kiebler.')
   .pauseFor(500)
-  .deleteChars(19)
-  .typeString("Backend-Entwickler")
-  .pauseFor(500)
-  .deleteChars(18)
+  .deleteChars(23)
+  .typeString("Fullstack-Entwickler")
+  .pauseFor(300)
+  .deleteChars(20)
   .typeString("Gesundheits-Informatik-Student")
   .pauseFor(500)
   .deleteAll()
@@ -64,12 +64,6 @@ onInit={(typewriter) => {
         <Image src={baumBild} alt="Farbiges Bild mit Baumschatten" className="w-1/2 float-right" />
       </div>
       
-      {/*<div>
-        <h1>Seh was andere Sagen</h1>
-        {allPosts.map((post)=>
-          <Message key={post.id} {...post}></Message>
-        )}
-        </div>*/}
     </motion.main>
   );
 }

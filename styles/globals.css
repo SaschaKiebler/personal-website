@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 body{
-    overflow: hidden;
     background: black;
+    overflow: auto;
+    scroll-behavior: smooth;
 }
+

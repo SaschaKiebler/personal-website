@@ -28,16 +28,16 @@ if (user) {
     route.push("/");
 }
 else{
-    console.log("login");
+    
 }
 }, [user]);
 
     return(
         <motion.div 
         initial={{y:"100%"}} animate={{y:"0%"}} transition={{duration:0.75, ease:"easeOut"}} exit={{opacity:1}}
-        className='w-full h-full absolute bg-black text-white'>
-            <h1>Login mit deinem favorisierten Anbieter</h1>
-            <button onClick={googleLogin}><FcGoogle/>mit Google</button>
+        className='w-full h-full absolute bg-black text-white text-center lg:mt-3 font-poppins'>
+            <h1 className='text-xl'>Login mit deinem favorisierten Anbieter</h1>
+            <button onClick={googleLogin} className="inline-flex p-2 mt-2 rounded-md bg-slate-800 lg:w-1/4 w-11/12 items-center justify-center"><FcGoogle className='mr-1'/>mit Google</button>
         </motion.div>
     )
 }

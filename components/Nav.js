@@ -25,12 +25,12 @@ return(
         </Link>
         <Link href="/kontakt" className="lg:ml-12 lg:mr-12">
         <li>KONTAKT</li>
-        </Link>
+        </Link></div><div>
         {!user && (
             <Link href="/auth/login">
             <li>LOGIN</li>
             </Link>
-        )}</div><div>
+        )}
         {user && ( 
         
                 <Link href="/profil">
